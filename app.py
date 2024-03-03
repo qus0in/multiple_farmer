@@ -3,9 +3,13 @@ from biz import Screener
 
 st.set_page_config(page_title='Multiple Farmer', page_icon='🌱')
 st.title('Multiple Farmer')
-cols = st.columns(6)
-cols[0].link_button('📌 GitHub', 'https://github.com/qus0in/multiple_farmer')
-cols[1].link_button('📌 Finviz', 'https://finviz.com/')
+cols = st.columns(4)
+cols[0].link_button('📌 GitHub',
+                    'https://github.com/qus0in/multiple_farmer',
+                    use_container_width=True)
+cols[1].link_button('📌 Finviz',
+                    'https://finviz.com/',
+                    use_container_width=True)
 st.image('multiple_farmer.png', use_column_width=True)
 
 with st.spinner('Loading data...'):
