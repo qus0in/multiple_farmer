@@ -2,6 +2,8 @@
 > `토스 모으기`로 `레버리지 ETF` `시스템 트레이딩` <br>
 > `농부`지만 마음이 많이 급한...
 
+* [📌 Streamlit](https://multiple-farmer.streamlit.app/)
+
 ![농부](./multiple_farmer.png)
 
 ## Idea
