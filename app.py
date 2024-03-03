@@ -3,6 +3,7 @@ from biz import Screener
 
 st.set_page_config(page_title='Multiple Farmer', page_icon='🌱')
 st.title('Multiple Farmer')
+st.link_button('📌 GitHub', 'https://github.com/qus0in/multiple_farmer')
 st.image('multiple_farmer.png', use_column_width=True)
 
 with st.spinner('Loading data...'):
