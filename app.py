@@ -24,7 +24,8 @@ col2.dataframe(t2, use_container_width=True)
 
 st.header('Target Yield')
 t3 = ty.loc[:, ['target_yield']]\
-    .sort_values(by='target_yield').T
+    .sort_values(by='target_yield',
+                 ascending=False).T
 for i in range(0, len(t3.columns), 5):
     st.dataframe(t3.iloc[:, i:i+5],
                  use_container_width=True,
