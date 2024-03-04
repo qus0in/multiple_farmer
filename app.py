@@ -13,8 +13,7 @@ cols[1].link_button('📌 Finviz',
 st.image('multiple_farmer.png', use_column_width=True)
 
 with st.spinner('Loading data...'):
-    screener = Screener()
-    ty, t1, t2 = screener.get_table()
+    ty, t1, t2 = Screener.get_table()
 
 col1, col2 = st.columns(2)
 col1.header('In')
