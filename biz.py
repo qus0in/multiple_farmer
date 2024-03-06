@@ -13,6 +13,7 @@ def get_periods():
     return periods[2:]
 
 periods = get_periods()
+exclusion = ['FNGO', 'SPUU', 'FBGX', 'TECS']
 
 class Screener:
     @classmethod
@@ -72,7 +73,7 @@ class Screener:
         df = cls.fetch_etf_list()
         q = 'assets > assets.max() ** 0.5 or volume > volume.mean()'
         df.query(q, inplace=True)
-        q2 = 'not symbol.str.contains("FNGO|SPUU|FBGX")'
+        q2 = f'not symbol.str.contains("{"|".join(exclusion)}")'
         df.query(q2, inplace=True)
         df['score'] = [cls.get_score(t) for t in df.symbol]
         df['score_yst'] = [cls.get_score(t, shift=1) for t in df.symbol]
